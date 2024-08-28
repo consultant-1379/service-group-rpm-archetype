@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.ericsson.oss.archetypes</groupId>
+  <artifactId>service-group-rpm-archetype</artifactId>
+  <version>1.0.2542-SNAPSHOT</version>
+  <packaging>maven-archetype</packaging>
+
+  <name>service-group-rpm-archetype</name>
+
+  <build>
+    <extensions>
+      <extension>
+        <groupId>org.apache.maven.wagon</groupId>
+        <artifactId>wagon-webdav-jackrabbit</artifactId>
+        <version>2.2</version>
+      </extension>
+      <extension>
+        <groupId>org.apache.maven.archetype</groupId>
+        <artifactId>archetype-packaging</artifactId>
+        <version>2.2</version>
+      </extension>
+    </extensions>
+
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <artifactId>maven-archetype-plugin</artifactId>
+          <version>2.2</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+  <licenses>
+    <license>
+      <name>LM Ericsson Ltd</name>
+    </license>
+  </licenses>
+
+  <scm>
+    <connection>scm:git:ssh://gerrit.ericsson.se:29418/OSS/com.ericsson.oss.archetypes/service-group-rpm-archetype</connection>
+    <developerConnection>scm:git:ssh://gerrit.ericsson.se:29418/OSS/com.ericsson.oss.archetypes/service-group-rpm-archetype</developerConnection>
+  </scm>
+
+  <distributionManagement>
+    <repository>
+      <id>releases</id>
+      <url>https://arm1s11-eiffel004.eiffel.gic.ericsson.se:8443/nexus/content/repositories/releases</url>
+    </repository>
+  </distributionManagement>
+
+
+</project>

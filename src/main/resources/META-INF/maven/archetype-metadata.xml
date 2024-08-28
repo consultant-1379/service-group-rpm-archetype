@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-descriptor xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd" name="cmservice"
+    xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<requiredProperties>
+		<requiredProperty key="version">
+			<defaultValue>1.0.1-SNAPSHOT</defaultValue>
+		</requiredProperty>
+		<!-- first property feeds default into mediaCat -->
+		<requiredProperty key="defaultMediaCat">
+                        <defaultValue>service</defaultValue>
+                </requiredProperty>
+		<requiredProperty key="mediaCat">
+                        <defaultValue>${defaultMediaCat}</defaultValue>
+		</requiredProperty>
+
+                <requiredProperty key="CXP"/>
+		<requiredProperty key="Deliverable"/>
+	</requiredProperties>
+
+	<fileSets>
+		<fileSet filtered="true" encoding="UTF-8">
+			<directory></directory>
+			<includes>
+				<include>.project</include>
+			</includes>
+		</fileSet>
+		
+		<fileSet encoding="UTF-8">
+			<directory></directory>
+			<includes>
+				<include>CI-USEFUL-INFO.txt</include>
+				<include>.gitignore</include>
+			</includes>
+		</fileSet>
+		
+		<fileSet filtered="true" encoding="UTF-8">
+			<directory>ERICenmsg__Deliverable_____CXP__</directory>
+		</fileSet>
+
+		<fileSet encoding="UTF-8">
+			<directory>src/main/scripts</directory>
+			<includes>
+			  <include>**/*.txt</include>
+			</includes>
+		</fileSet>
+		
+		<fileSet encoding="UTF-8">
+			<directory>src/main/resources</directory>
+			<includes>
+			  <include>**/*.xml</include>
+			  <include>**/*.txt</include>
+			</includes>
+		</fileSet>
+		
+		<fileSet encoding="UTF-8">
+			<directory>src/main</directory>
+			<includes>
+			  <include>**/*.gitignore</include>
+			</includes>
+		</fileSet>
+		 
+		<fileSet encoding="UTF-8">
+			<directory>src/main/scripts</directory>
+			<includes>
+			  <include>**/*.sh</include>
+			  <include>**/*.gitignore</include>
+			</includes>
+		</fileSet>
+		  
+		<fileSet encoding="UTF-8">
+			<directory>src/main/resources</directory>
+			<includes>
+			  <include>**/*.enm</include>
+			  <include>**/*.conf</include>
+			  <include>**/*.gitignore</include>
+			  <include>**/*.master</include>
+			</includes>
+		</fileSet>
+		 
+		<fileSet encoding="UTF-8">
+			<directory></directory>
+			<includes>
+			  <include>.gitignore</include>
+			  <include>README</include>
+			</includes>
+		</fileSet>
+    </fileSets>		
+  
+</archetype-descriptor>
